@@ -86,7 +86,6 @@ namespace BollywoodCinema
                     }
                     posNode = posNode.Next;
                     i++;
-
                 }
             }
         }
