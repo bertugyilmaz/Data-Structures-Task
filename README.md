@@ -15,15 +15,15 @@ liste (Single Linked List) örneği oluşturmanız beklenmektedir.
 ------------------------------
 Uygulamanızı gerçekleştirirken aşağıda bulunan metotları implemente etmelisiniz.
 
- public override void InsertPos(int position, int value): Koltuk numarasını
+- public override void InsertPos(int position, int value): Koltuk numarasını
    
 belirleyen müşterileri InsertPos işlemi ile salona eklemeniz gerekmektedir. 
 
- public override void DeletePos(int position): Biletini iptal etmek isteyen
+- public override void DeletePos(int position): Biletini iptal etmek isteyen
 
 müşteriyi DeletePos işlemi ile listedem kaldırmanız gerekmektedir. 
 
- public override Node GetElement(int position). İsim soyisim gibibilgileri
+- public override Node GetElement(int position). İsim soyisim gibibilgileri
 
 girilen müşterinin koltuk numarasını geriye döndürmeniz gerekmektedir.  Son olarak salonda kaç kişi olduğunu gösteriniz, dolu ve boş koltukları listeleyiniz.
 
