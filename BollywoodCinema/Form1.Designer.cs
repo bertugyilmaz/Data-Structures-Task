@@ -30,16 +30,16 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.fullSeatsButton = new System.Windows.Forms.Button();
             this.holdButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.seatNumberTextBox = new System.Windows.Forms.TextBox();
             this.nameSurnameTextBox = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.fullSeatsButton = new System.Windows.Forms.Button();
-            this.removeSeatNumberTextBox = new System.Windows.Forms.TextBox();
-            this.removeButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.removeButton = new System.Windows.Forms.Button();
+            this.removeSeatNumberTextBox = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -72,6 +72,16 @@
             this.tabPage1.Text = "Rezerve Et!";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // fullSeatsButton
+            // 
+            this.fullSeatsButton.Location = new System.Drawing.Point(89, 427);
+            this.fullSeatsButton.Name = "fullSeatsButton";
+            this.fullSeatsButton.Size = new System.Drawing.Size(209, 44);
+            this.fullSeatsButton.TabIndex = 4;
+            this.fullSeatsButton.Text = "Dolu Koltukları Listele";
+            this.fullSeatsButton.UseVisualStyleBackColor = true;
+            this.fullSeatsButton.Click += new System.EventHandler(this.fullSeatsButton_Click);
+            // 
             // holdButton
             // 
             this.holdButton.Location = new System.Drawing.Point(138, 278);
@@ -85,7 +95,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 192);
+            this.label2.Location = new System.Drawing.Point(2, 192);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 20);
             this.label2.TabIndex = 2;
@@ -94,7 +104,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 140);
+            this.label1.Location = new System.Drawing.Point(47, 140);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 20);
             this.label1.TabIndex = 2;
@@ -102,14 +112,14 @@
             // 
             // seatNumberTextBox
             // 
-            this.seatNumberTextBox.Location = new System.Drawing.Point(138, 189);
+            this.seatNumberTextBox.Location = new System.Drawing.Point(134, 189);
             this.seatNumberTextBox.Name = "seatNumberTextBox";
             this.seatNumberTextBox.Size = new System.Drawing.Size(258, 26);
-            this.seatNumberTextBox.TabIndex = 1;
+            this.seatNumberTextBox.TabIndex = 2;
             // 
             // nameSurnameTextBox
             // 
-            this.nameSurnameTextBox.Location = new System.Drawing.Point(138, 140);
+            this.nameSurnameTextBox.Location = new System.Drawing.Point(133, 140);
             this.nameSurnameTextBox.Name = "nameSurnameTextBox";
             this.nameSurnameTextBox.Size = new System.Drawing.Size(258, 26);
             this.nameSurnameTextBox.TabIndex = 1;
@@ -127,22 +137,14 @@
             this.tabPage2.Text = "İptal!";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // fullSeatsButton
+            // label3
             // 
-            this.fullSeatsButton.Location = new System.Drawing.Point(89, 427);
-            this.fullSeatsButton.Name = "fullSeatsButton";
-            this.fullSeatsButton.Size = new System.Drawing.Size(209, 44);
-            this.fullSeatsButton.TabIndex = 3;
-            this.fullSeatsButton.Text = "Dolu Koltukları Listele";
-            this.fullSeatsButton.UseVisualStyleBackColor = true;
-            this.fullSeatsButton.Click += new System.EventHandler(this.fullSeatsButton_Click);
-            // 
-            // removeSeatNumberTextBox
-            // 
-            this.removeSeatNumberTextBox.Location = new System.Drawing.Point(134, 173);
-            this.removeSeatNumberTextBox.Name = "removeSeatNumberTextBox";
-            this.removeSeatNumberTextBox.Size = new System.Drawing.Size(251, 26);
-            this.removeSeatNumberTextBox.TabIndex = 0;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(4, 174);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(124, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Koltuk Numarası";
             // 
             // removeButton
             // 
@@ -154,14 +156,12 @@
             this.removeButton.UseVisualStyleBackColor = true;
             this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
             // 
-            // label3
+            // removeSeatNumberTextBox
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 174);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Koltuk Numarası";
+            this.removeSeatNumberTextBox.Location = new System.Drawing.Point(134, 173);
+            this.removeSeatNumberTextBox.Name = "removeSeatNumberTextBox";
+            this.removeSeatNumberTextBox.Size = new System.Drawing.Size(251, 26);
+            this.removeSeatNumberTextBox.TabIndex = 0;
             // 
             // Form1
             // 
