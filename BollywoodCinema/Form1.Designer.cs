@@ -135,6 +135,7 @@
             this.fullSeatsButton.TabIndex = 3;
             this.fullSeatsButton.Text = "Dolu Koltukları Listele";
             this.fullSeatsButton.UseVisualStyleBackColor = true;
+            this.fullSeatsButton.Click += new System.EventHandler(this.fullSeatsButton_Click);
             // 
             // removeSeatNumberTextBox
             // 

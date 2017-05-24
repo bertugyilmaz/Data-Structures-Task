@@ -40,5 +40,21 @@ namespace BollywoodCinema
 
             MessageBox.Show("Yer ayırıldı!");
         }
+
+        private void fullSeatsButton_Click(object sender, EventArgs e)
+        {
+            string str = "";
+            for (int i = 1; i <= 60; i++)
+            {
+                Node node = (Node)CustomersList.GetElement(i);
+                if (node.Data != null)
+                {
+                    Customer customer = (Customer)node.Data;
+                    str += customer.NameSurname + " " + "Koltuk Numaranız : " + customer.SeatNumber + Environment.NewLine;
+                }
+            }
+
+            MessageBox.Show(str);
+        }
     }
 }
