@@ -10,10 +10,9 @@ namespace BollywoodCinema
     {
         public Node Head;
         public int Size = 0;
-
-        public abstract void InsertFirst(int value);
-        public abstract void InsertPos(int value, int position);
+        public abstract void InsertPos(object value, int position);
+        public abstract void CreatePos(object value);
         public abstract void DeletePos(int position);
-        public abstract Node GetElement(int position);
+        public abstract object GetElement(int position);
     }
 }
