@@ -17,7 +17,16 @@ namespace BollywoodCinema
             InitializeComponent();
         }
 
+        LinkedList CustomersList = new LinkedList();
         private void Form1_Load(object sender, EventArgs e)
+        {
+            for (int i = 1; i <= 60; i++)
+            {
+                CustomersList.CreatePos(null);
+            }
+        }
+
+        private void holdButton_Click(object sender, EventArgs e)
         {
 
         }
