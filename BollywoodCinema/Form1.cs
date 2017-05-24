@@ -28,7 +28,17 @@ namespace BollywoodCinema
 
         private void holdButton_Click(object sender, EventArgs e)
         {
+            Customer customers = new Customer();
 
+            customers.NameSurname = nameSurnameTextBox.Text;
+            customers.SeatNumber = Convert.ToInt32(seatNumberTextBox.Text);
+
+            CustomersList.InsertPos(customers, customers.SeatNumber);
+
+            nameSurnameTextBox.Text = " ";
+            seatNumberTextBox.Text = " ";
+
+            MessageBox.Show("Yer ayırıldı!");
         }
     }
 }
