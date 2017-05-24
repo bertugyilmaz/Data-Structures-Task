@@ -8,35 +8,42 @@ namespace BollywoodCinema
 {
     public class LinkedList : LinkedListADT
     {
+        public override void CreatePos(object value)
+        {
+            Node tempHead = new Node { Data = value };
+
+            if (Head == null) { Head = tempHead; }
+            else
+            {
+                tempHead.Next = Head;
+                Head = tempHead;
+            }
+            Size++; //LinkedList in boyutu aynı zamanda toplam koltuk sayısıda denebilir.
+        }
+
         public override void DeletePos(int position)
         {
-            Node temp = null;
             Node postemp = Head;
 
             int i = 1;
-
             while (postemp != null)
             {
                 if (position == i)
                 {
-                    temp = postemp.Next;
-                    postemp = null;
-                    postemp = temp;
-
+                    postemp.Data = null;
                     break;
                 }
                 postemp = postemp.Next;
                 i++;
             }
-
         }
 
-        public override Node GetElement(int position)
+        public override object GetElement(int position)
         {
             Node returnNode = null;
 
             Node tempNode = Head;
-            int count = 0;
+            int count = 1;
 
             while (tempNode != null)
             {
@@ -47,46 +54,24 @@ namespace BollywoodCinema
                 }
                 tempNode = tempNode.Next;
                 count++;
-
             }
-
             return returnNode;
         }
 
-        public override void InsertFirst(int value)
+        public override void InsertPos(object value, int position)
         {
-            Node tmpHead = new Node { Data = value };
-
-            if (Head == null) { Head = tmpHead; }          //Head boş(NULL) ise iteratöre atar
-            else { tmpHead.Next = Head; Head = tmpHead; }  //tmpHead in next i Head i göstermeli. Yeni Head tmpHead olmuştur.
-
-            Size++; // Listedeki Eleman sayısı 
-        }
-
-        public override void InsertPos(int value, int position)
-        {
-            Node newNode = new Node { Data = value };
+            Node newNode = Head;
 
             int i = 1;
-            if (Head == null) { InsertFirst(value); }
-            else
+            while (i <= 60)
             {
-                Node posNode = Head;
-                Node tempNext = null;
-
-                while (posNode != null)
+                if (position == i && Size <= 60)
                 {
-                    if (position == i)
-                    {
-                        tempNext = posNode.Next;
-                        newNode.Next = tempNext;
-                        posNode.Next = newNode;
-
-                        break;
-                    }
-                    posNode = posNode.Next;
-                    i++;
+                    newNode.Data = value;
+                    break;
                 }
+                newNode = newNode.Next;
+                i++;
             }
         }
     }
