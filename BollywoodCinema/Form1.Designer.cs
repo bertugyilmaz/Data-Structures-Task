@@ -152,6 +152,7 @@
             this.removeButton.TabIndex = 1;
             this.removeButton.Text = "İptal Et!";
             this.removeButton.UseVisualStyleBackColor = true;
+            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
             // 
             // label3
             // 

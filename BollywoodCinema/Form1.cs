@@ -56,5 +56,15 @@ namespace BollywoodCinema
 
             MessageBox.Show(str);
         }
+
+        private void removeButton_Click(object sender, EventArgs e)
+        {
+            int seatNumber = Convert.ToInt32(removeSeatNumberTextBox.Text);
+
+            CustomersList.DeletePos(seatNumber);
+            seatNumberTextBox.Text = " ";
+
+            MessageBox.Show("Bilet iptal edilmiştir.");
+        }
     }
 }
